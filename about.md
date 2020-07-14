@@ -26,7 +26,7 @@ titles:
 key: page-about
 ---
 
-![](https://gitee.com/evilashz/MyIMGs/raw/master/img/20200714151445.png)
+<img src="https://gitee.com/evilashz/MyIMGs/raw/master/img/20200714151445.png" style="zoom: 50%;" />
 
 - 懒  / 摇滚 / Security Researcher of ADLab Venus
 
