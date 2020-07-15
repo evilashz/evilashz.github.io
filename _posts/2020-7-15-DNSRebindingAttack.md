@@ -109,7 +109,8 @@ if __name__ == '__main__':
 
 ### 参考
 
-[1]: http://www.bendawang.site/2017/05/31/关于DNS-rebinding的总结/
-[2]: http://blog.leanote.com/post/snowming/e2c24cf057a4
-[3]: https://blog.csdn.net/u011721501/article/details/54667714
+http://www.bendawang.site/2017/05/31/关于DNS-rebinding的总结
 
+http://blog.leanote.com/post/snowming/e2c24cf057a4 
+
+https://blog.csdn.net/u011721501/article/details/54667714
