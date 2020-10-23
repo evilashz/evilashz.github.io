@@ -37,4 +37,3 @@ key: page-about
 ## Connect Me
 
 - WeChat：***MS14-068***
-- Sina Weibo ([张鹏瑶](https://weibo.com/u/2314969111))
