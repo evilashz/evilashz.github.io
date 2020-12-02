@@ -28,7 +28,7 @@ LM Hash的计算:
 3. 再分7bit为一组,每组末尾加0，再组成一组
 4. 上步骤得到的二组，分别作为key 为 `KGS!@#$%`进行DES加密。
 5. 将加密后的两组拼接在一起，得到最终LM HASH值。
-
+{% raw %}
 ```python
 #coding=utf-8
 import re
@@ -70,7 +70,7 @@ def lm_hash(password):
 if __name__ == '__main__':
     hash = lm_hash("123456")
 ```
-
+{% endraw %}
 LM加密算法存在一些固有的漏洞
 
 1. 首先，密码长度最大只能为14个字符
