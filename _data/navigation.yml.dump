@@ -6,14 +6,14 @@ header:
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  归档
+      zh-Hans : &ZH_HANS  褰掓。
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  歸檔
+      zh-Hant : &ZH_HANT  姝告獢
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       아카이브
+      ko      : &KO       鞎勳勾鞚措笇
       ko-KR   : *KO
       fr      : &FR       Archives
       fr-BE   : *FR
@@ -31,16 +31,16 @@ header:
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  关于
+      zh-Hans : &ZH_HANS  鍏充簬
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  關於
+      zh-Hant : &ZH_HANT  闂滄柤
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       소개
+      ko      : &KO       靻岅皽
       ko-KR   : *KO
-      fr      : &FR       À propos
+      fr      : &FR       脌 propos
       fr-BE   : *FR
       fr-CA   : *FR
       fr-CH   : *FR
@@ -56,16 +56,16 @@ header:
       en-US   : *EN
       en-CA   : *EN
       en-AU   : *EN
-      zh-Hans : &ZH_HANS  关于
+      zh-Hans : &ZH_HANS  鍏充簬
       zh      : *ZH_HANS
       zh-CN   : *ZH_HANS
       zh-SG   : *ZH_HANS
-      zh-Hant : &ZH_HANT  關於
+      zh-Hant : &ZH_HANT  闂滄柤
       zh-TW   : *ZH_HANT
       zh-HK   : *ZH_HANT
-      ko      : &KO       소개
+      ko      : &KO       靻岅皽
       ko-KR   : *KO
-      fr      : &FR       À propos
+      fr      : &FR       脌 propos
       fr-BE   : *FR
       fr-CA   : *FR
       fr-CH   : *FR
