@@ -140,6 +140,12 @@ NTLM验证是一种Challenge/Response 验证机制，由三种消息组成:通�
 
 这六种使用的加密流程一样，都是前面我们说的Challenge/Response 验证机制,区别在Challenge和加密算法不同。
 
+
+
+Net-NTLM Hash可以用作中间人攻击，NTLMv1/v2 Hash可以用作pth
+
+
+
 ### 0x04 SSP & SSPI
 
  
