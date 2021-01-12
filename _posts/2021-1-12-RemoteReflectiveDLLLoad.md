@@ -342,7 +342,7 @@ msf5 exploit(multi/handler) > exploit -j
 
 #### 在目前的基础上VT测试：
 
-![1](/Users/ayaozpy/FreeKIllScript/shellcode/ReflectDLLBasedMemoryModule/1.PNG)
+![1](https://gitee.com/evilashz/MyIMGs/raw/master/img/20210112182622.PNG)
 
 ​	其实恶意代码不在这程序里，测这个意义也不大，更多要考虑的还是行为，因为反射DLL还是很敏感的。
 
