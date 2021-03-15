@@ -342,7 +342,7 @@ msf5 exploit(multi/handler) > exploit -j
 
 #### 在目前的基础上VT测试：
 
-![1](https://gitee.com/evilashz/MyIMGs/raw/master/img/20210112182622.PNG)
+![1](/Users/ayaozpy/Desktop/20210112182622.png)
 
 ​	其实恶意代码不在这程序里，测这个意义也不大，更多要考虑的还是行为。
 
