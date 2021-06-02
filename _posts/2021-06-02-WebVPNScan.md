@@ -31,7 +31,7 @@ tags: 渗透
 
 
 
-使用@c0ny1所写的`jsEncrypter`Burp插件，是用来爆破前端存在JS加密的登陆口使用的，原理一样，所以使用其中的`phantomjs_server.js`，使用phantomjs开启webserver并提供一个接口
+使用@c0ny1所写的`jsEncrypter`Burp插件，是用来爆破前端存在JS加密的登陆口使用的，原理一样，所以使用其中的`phantomjs_server.js`，使用phantomjs开启webserver并提供一个接口，并将自己的数据传入到要调用的代码中做处理。
 
 ```javascript
 /**
