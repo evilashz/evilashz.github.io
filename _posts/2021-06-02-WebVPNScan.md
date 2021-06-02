@@ -1,3 +1,8 @@
+---
+title: 通过 WebVPN 扫描内网
+tags: 渗透
+---
+
 ​	经过@尼克的信息搜集，获取到一位人员的工号并且成功重置其密码，登陆其统一认证系统，以及VPN，发现此VPN不是彼VPN，访问资源都是以他代理去访问的，而不是直接拨入内网。
 
 ![](https://images-1258433570.cos.ap-beijing.myqcloud.com/images/20210602182411.png)
