@@ -115,10 +115,10 @@ var service = server.listen(1664, function(request, response){
 
 最后使用python的requests库，编写一个扫描c段和常见端口的脚本进行内网探测：
 
-![image-20210602180441569](/Users/ayaozpy/Library/Application Support/typora-user-images/image-20210602180441569.png)
+![image-20210602180441569](https://images-1258433570.cos.ap-beijing.myqcloud.com/images/20210602185908.png)
 
 可以成功探测内网，识别title：
 
-![image-20210602180540583](/Users/ayaozpy/Library/Application Support/typora-user-images/image-20210602180540583.png)
+![image-20210602180540583](https://images-1258433570.cos.ap-beijing.myqcloud.com/images/20210602185911.png)
 
 最后就解决了尴尬的问题，比较有意思。
