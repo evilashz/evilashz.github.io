@@ -30,4 +30,4 @@ tags: 域渗透
 
 ![image-20210625073550559](/Users/ayaozpy/Library/Application Support/typora-user-images/image-20210625073550559.png)
 
-总结，其实就是如果存在`CVE-2019-1040`这个漏洞的话，那么这个利用讲非常灵活，可以不用考虑触发的NTLM请求是否携带签名，goodgood晚安
+总结，其实就是如果存在`CVE-2019-1040`这个漏洞的话，那么这个利用讲非常灵活，可以不用考虑触发的NTLM请求是否携带签名，请原谅我写的这么简单，就是懒得写，看直播去了886，goodgood
