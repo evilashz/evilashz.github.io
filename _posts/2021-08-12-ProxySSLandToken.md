@@ -15,7 +15,7 @@ tags: 渗透测试
 
 ​	进一步确定发现其中的参数token是控制访问有效性的，token解开URL以及base64后如下
 
-<img src="/Users/ayaozpy/Library/Application Support/typora-user-images/image-20210812211608419.png" alt="image-20210812211608419" style="zoom:50%;" />
+<img src="https://images-1258433570.cos.ap-beijing.myqcloud.com/images/20210813200856.png" alt="image-20210812211608419" style="zoom:50%;" />
 
 转换得到：
 
