@@ -34,3 +34,9 @@ key: page-about
 ## Connect Me
 
 - WeChat：***MS14-068***
+
+-----
+
+
+## 知识星球
+<img src="https://images-1258433570.cos.ap-beijing.myqcloud.com/images/20210912121705.png" alt="海报 (1)" style="zoom: 50%;" />
