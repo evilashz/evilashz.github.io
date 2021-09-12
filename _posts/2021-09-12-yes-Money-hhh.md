@@ -35,4 +35,6 @@ tags: 杂
 
 ​	最后，本公众号、星球运营者只有我一人，也像我上面所说的一个人的力量是有限的，所以在这也招募星球合伙人， 希望你可以补全星球知识面的短板，比如java代码审计、java安全研究、安全开发等。
 
+<img src="https://images-1258433570.cos.ap-beijing.myqcloud.com/images/20210912121705.png" alt="海报 (1)" style="zoom: 50%;" />
+
 ​	
