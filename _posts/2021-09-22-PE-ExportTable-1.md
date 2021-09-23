@@ -1,5 +1,5 @@
 ---
-title: PE结构-导出表函数定位学习
+title: PE结构-导出表函数定位
 tags: 免杀
 ---
 
@@ -202,31 +202,9 @@ PVOID GetAddressFromExportTable(PVOID pBaseAddress, PCHAR pszFunctionName)
 	}
 ```
 
-第二种通过序号遍历，我直接在第一段的代码基础上改进，使其支持两种遍历：
+第二种通过序号遍历，我直接在第一段的代码基础上改进，使其支持两种遍历，关键代码如下：
 
 ```c++
-PVOID GetAddressFromExportTable(PVOID pBaseAddress)
-{
-	PVOID get_address = 0;
-	ULONG ulFunctionIndex = 0;
-	// Dos Header
-	PIMAGE_DOS_HEADER pDosHeader = (PIMAGE_DOS_HEADER)pBaseAddress;
-	// NT Header
-	PIMAGE_NT_HEADERS pNtHeaders = (PIMAGE_NT_HEADERS)((PUCHAR)pDosHeader + pDosHeader->e_lfanew);
-	// Export Table
-	PIMAGE_EXPORT_DIRECTORY pExportTable = (PIMAGE_EXPORT_DIRECTORY)((PUCHAR)pDosHeader + pNtHeaders->OptionalHeader.DataDirectory[0].VirtualAddress);
-	// 有名称的导出函数个数
-	ULONG ulNumberOfNames = pExportTable->NumberOfNames;
-	//导出函数总数
-	ULONG ulNumberOfFunctions = pExportTable->NumberOfFunctions;
-	//函数名序号表
-	PWORD ulAddressOfNameOrdinals = (PWORD)((PUCHAR)pDosHeader + pExportTable->AddressOfNameOrdinals);
-	// 导出函数名称地址表
-	PULONG lpNameArray = (PULONG)((PUCHAR)pDosHeader + pExportTable->AddressOfNames);
-	char* lpName = NULL;
-	// 序号
-	WORD wBase = pExportTable->Base;
-	// 开始遍历导出表
 	for (int i = 0; i < ulNumberOfFunctions; i++)
 	{
 
@@ -237,27 +215,29 @@ PVOID GetAddressFromExportTable(PVOID pBaseAddress)
 			if (ulAddressOfNameOrdinals[j] == i)
 			{
 				//USHORT uHint = *(USHORT*)((PUCHAR)pDosHeader + pExportTable->AddressOfNameOrdinals + 2 * i);
-				ULONG ulFuncAddr = *(PULONG)((PUCHAR)pDosHeader + pExportTable->AddressOfFunctions + 4 * i);
+				ulFuncAddr = *(PULONG)((PUCHAR)pDosHeader + pExportTable->AddressOfFunctions + 4 * i);
 				get_address = (PVOID)((PUCHAR)pDosHeader + ulFuncAddr);
 				printf("ordinary: %d ", wBase+i);
 				printf("name: %s ", lpName);
 				printf("RVA address:%8X ", get_address);
 				printf("FOA address:%4X\n", ulFuncAddr);
+				goto namefinish;
 			}
-			else {
-				ULONG ulFuncAddr = *(PULONG)((PUCHAR)pDosHeader + pExportTable->AddressOfFunctions + 4 * i);
-				get_address = (PVOID)((PUCHAR)pDosHeader + ulFuncAddr);
-				printf("ordinary: %d ", wBase + i);
-				printf("name: NULL ");
-				printf("RVA address:%8X ", get_address);
-				printf("FOA address:%4X\n", ulFuncAddr);
-			}
-		}
 			
-	}
+		}
 
-	return get_address;
-}
+		ulFuncAddr = *(PULONG)((PUCHAR)pDosHeader + pExportTable->AddressOfFunctions + 4 * i);
+		get_address = (PVOID)((PUCHAR)pDosHeader + ulFuncAddr);
+		printf("ordinary: %d ", wBase + i);
+		printf("name: NULL ");
+		printf("RVA address:%8X ", get_address);
+		printf("FOA address:%4X\n", ulFuncAddr);
+
+		//FARPROC OrignalTestFuction;
+		//OrignalTestFuction = (FARPROC)((PUCHAR)pBaseAddress + ulFuncAddr);
+		//OrignalTestFuction();
+		namefinish: TRUE;
+	}
 ```
 
 如上代码可以自动遍历DLL文件的导出表，无论是从名称导出还是从序号导出，实验在DLL中添加一个按名称导出函数，三个序号导出，运行结果如下：
