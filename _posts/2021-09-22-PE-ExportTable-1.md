@@ -202,7 +202,17 @@ PVOID GetAddressFromExportTable(PVOID pBaseAddress, PCHAR pszFunctionName)
 	}
 ```
 
-第二种通过序号遍历，我直接在第一段的代码基础上改进，使其支持两种遍历，关键代码如下：
+第二种通过序号遍历，我直接在第一段的代码基础上改进，使其支持两种遍历，
+
+1. 获取`NumberOfFunctions`导出函数总数，遍历
+
+2. 获取`NumberOfNames`函数名地址表，再遍历有名称的
+
+3. 获取`AddressOfNameOrdinals`函数名序号表，对比如果序号一样即为名称导出
+
+4. 剩下的就是序号导出在`AddressOfFunctions`结构获取地址即可
+
+   关键代码如下：
 
 ```c++
 	for (int i = 0; i < ulNumberOfFunctions; i++)
@@ -240,9 +250,21 @@ PVOID GetAddressFromExportTable(PVOID pBaseAddress, PCHAR pszFunctionName)
 	}
 ```
 
-如上代码可以自动遍历DLL文件的导出表，无论是从名称导出还是从序号导出，实验在DLL中添加一个按名称导出函数，三个序号导出，运行结果如下：
+主要参考如下结构：
+
+![](https://images-1258433570.cos.ap-beijing.myqcloud.com/images/20210923145604.png)
+
+​	如上代码可以自动遍历DLL文件的导出表，无论是从名称导出还是从序号导出，实验在DLL中添加一个按名称导出函数，三个序号导出，运行结果如下：
 
 ![image-20210923142102477](https://images-1258433570.cos.ap-beijing.myqcloud.com/images/20210923142122.png)
+
+可以编写几行代码测试地址是否正确：
+
+```c++
+FARPROC OrignalTestFuction;
+OrignalTestFuction = (FARPROC)((PUCHAR)pBaseAddress + ulFuncAddr);
+OrignalTestFuction();
+```
 
 然后的实现逻辑就是将这个FOA保存起来，copy到预先定义的模板DLL文件，dll文件中
 
