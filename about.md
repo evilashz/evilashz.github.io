@@ -26,7 +26,7 @@ titles:
 key: page-about
 ---
 
-<img src="https://gitee.com/evilashz/MyIMGs/raw/master/img/20200714151445.png" style="zoom: 57%;" />
+<img src="/Users/ayaozpy/Desktop/me/89fba017tw1e0ak2j5norj.jpg" alt="89fba017tw1e0ak2j5norj" style="zoom: 400%;" />
 
 
 
