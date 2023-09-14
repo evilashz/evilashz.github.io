@@ -26,17 +26,4 @@ titles:
 key: page-about
 ---
 
-<img src="/Users/ayaozpy/Desktop/me/89fba017tw1e0ak2j5norj.jpg" alt="89fba017tw1e0ak2j5norj" style="zoom: 400%;" />
-
-
-
-
-## Connect Me
-
-- WeChat：***MS14-068***
-
------
-
-
-## 知识星球
-<img src="https://images-1258433570.cos.ap-beijing.myqcloud.com/images/20210912121705.png" alt="海报 (1)" style="zoom: 50%;" />
+![抠图](https://images-1258433570.cos.ap-beijing.myqcloud.com/images%E6%8A%A0%E5%9B%BE.png)

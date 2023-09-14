@@ -29,8 +29,3 @@ key: page-about
 
 
 - [lracker](http://lracker.com/)
-
-
-## Connect Me
-
-- WeChat：***MS14-068***
